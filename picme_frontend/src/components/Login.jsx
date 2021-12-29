@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import bgVideo from "../assets/share.mp4";
 import logo from "../assets/logo_transparent_2.png";
+import { client } from "../client";
 
 const Login = () => {
   const navigate = useNavigate();
