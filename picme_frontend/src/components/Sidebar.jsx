@@ -36,6 +36,14 @@ const Sidebar = ({ closeToggle, user }) => {
             <RiHomeFill />
             Home
           </NavLink>
+          <div>
+            <Link
+              to="about"
+              className="pl-5 text-indigo-500 hover:text-amber-400"
+            >
+              About PICME
+            </Link>
+          </div>
           <h3 className="mt-2 px-5 text-base 2xl:text-xl">
             Discover cateogries
           </h3>

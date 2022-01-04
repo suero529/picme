@@ -7,7 +7,7 @@ import { categories } from "../utils/data";
 import { client } from "../client";
 import Spinner from "./Spinner";
 
-const CreatePin = ({ user }) => {
+const UpdatePin = ({ user }) => {
   const [title, setTitle] = useState("");
   const [about, setAbout] = useState("");
   const [loading, setLoading] = useState(false);
@@ -70,8 +70,9 @@ const CreatePin = ({ user }) => {
         },
         category,
       };
-      client.create(doc).then(() => {
-        navigate("/");
+      client.createOrReplace().then((updatedPin) => {
+        console.log(updatedPin);
+        navigate("/pin-detail");
       });
     } else {
       setFields(true);
@@ -208,4 +209,4 @@ const CreatePin = ({ user }) => {
   );
 };
 
-export default CreatePin;
+export default UpdatePin;
